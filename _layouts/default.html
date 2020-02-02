@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>{{ page.title }} | Reality Studios</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" type="image/png" href="/assets/images/realitystudios-logo.png" />
+    <link rel="stylesheet" type="text/css" media="screen" href="/assets/css/main.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    {% feed_meta %}
+    {% seo %}
+    <script src="/assets/js/main.js"></script>
+</head>
+<body>
+    {% include header.html %}
+
+    <section class="wrapper">
+        <section class="content">
+            {{ content }}
+        </section>
+    </section>
+
+    {% include footer.html %}
+</body>
+</html>

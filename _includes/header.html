@@ -1,0 +1,14 @@
+<header>
+    <div class="nav_logo">
+        <a href="/">
+            <img src="/assets/images/realitystudios-logo.png">
+        </a>
+    </div>
+    <nav>
+        {% for item in site.data.navigation %}
+            <li class="nav_item {% if page.url == item.link %} nav_current {% endif %} nav_skew hvr_underline_reveal">
+                <a href="{{item.link}}"> {{ item.name | Uppercase }} </a>
+            </li>       
+        {% endfor %} 
+    </nav>
+</header>

@@ -1,0 +1,23 @@
+header{
+    position: fixed;
+    display: flex!important;
+    flex-basis: auto;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: #212B36;
+    width: 100%;
+    height: 60px;
+    
+    & > nav {
+        display: flex;
+        padding: 0;
+        margin: 0;
+        list-style: none;
+        margin-right: auto!important;
+        flex-direction: row;
+        text-decoration: none;
+        
+        height: 100%;
+    }   
+}

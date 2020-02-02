@@ -1,0 +1,28 @@
+.postcard{
+    width: 600px;
+    height: 200px;
+    text-decoration: none;
+    list-style: none;
+    margin: auto;
+
+    &_title{
+        position: relative;
+        height: 200px;
+        text-align: left;
+        
+        & > h2{ 
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            color: #000000;
+        
+            & > a{
+                text-decoration: none;
+            }
+        }
+    }
+
+    &_description{
+        text-align: left;
+    }
+}
