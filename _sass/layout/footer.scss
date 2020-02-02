@@ -6,7 +6,7 @@ footer{
     bottom: 0;
     color: #516982;
     background-color: #212B36;
-    height: fit-content;
+    height: 70px;
     width: 100%;
     text-align: center;
 }
@@ -60,10 +60,10 @@ footer{
                 font-size: 20px;
                 height: 1em;
                 width: 1em;
-                //margin-top: 0.5em !important;
+                margin-top: 0.1em;
                 //margin: 0 !important;
-                //margin-left: 0.5em;
-                //margin-right: 0.5em;
+                margin-left: 0.5em;
+                margin-right: 0.5em;
                 transition: .0s !important;
             }
         }
