@@ -16,9 +16,10 @@ layout: default
             </span>
         </div>
         <div class="post__header--tags">
+            {% assign tags = site.data.tags %}
             {% for tag in page.tags %}
-                <span class="badge badge-blue">
-                    <i class="{{ tag.icon }}"></i>{{ tag.name | upcase }}
+                <span class="badge badge-{{tags[tag].color}}">
+                    <i class="{{ tags[tag].icon }}"></i>{{ tag | upcase }}
                 </span>
             {% endfor %}
         </div>
