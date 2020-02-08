@@ -28,6 +28,18 @@ footer{
         }
     }
    
+    &_links {
+
+        height: 20px;
+
+        & > a {
+            display: block;
+            font-size: small;
+            color: #516982;
+            text-decoration: none;
+        }
+    }
+    
     &_social {
         display: flex;
         width: inherit;
