@@ -5,7 +5,14 @@ plugins:
   - jekyll-sitemap
   - jekyll-seo-tag
   - jekyll-feed
+  - jekyll-gist
 github: [metadata]
 sass:
   sass-dir: _sass
   style: compressed
+markdown: kramdown
+highlighter: rouge
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+  

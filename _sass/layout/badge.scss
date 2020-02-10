@@ -1,0 +1,26 @@
+$blue: #0044FF;
+$green: #00AA00;
+$red: #AA0000;
+
+.badge {
+    padding: 2px;
+    font-size: small;
+    font-weight: bold;
+    border-radius: 5px;
+
+    & > i {
+        margin-right: 5px;
+    }
+
+    &-blue{
+        background-color: $blue;
+    }
+
+    &-green{
+        background-color: $green;
+    }
+
+    &-red{
+        background-color: $red;
+    }
+}

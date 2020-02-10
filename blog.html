@@ -2,21 +2,21 @@
 layout: default
 title: Blog
 ---
-<h1>Latest Posts</h1>
-
-<ul>
-    {% for post in site.posts %}
+<section class="page">
+    <h1>Latest Posts</h1>
+    
+    <ul>
+        {% for post in site.posts %}
         <li class="postcard">
-            <div class="postcard_title">
-                <h2>
-                    <a href="{{ post.url }}">
+            <a href="{{ post.url }}">
+                <div class="postcard_title">
+                    <img src="{{post.cover}}" />
+                    <h1>
                         {{ post.title }}
-                    </a>
-                </h2>
-            </div>
-            <div class="postcard_description">
-                <p>{{ post.excerpt }}</p>
-            </div>
+                    </h1>
+                </div>
+            </a>
         </li>
-    {% endfor %}
-</ul>
+        {% endfor %}
+    </ul>
+</section>
