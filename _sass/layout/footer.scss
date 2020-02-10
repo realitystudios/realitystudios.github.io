@@ -21,7 +21,7 @@ footer{
         flex: 0 0 33.33333%;
         max-width: 33.33333%;
 
-        & > p {
+        & p {
             font-size: small;
             margin-top: 0.25em;
             margin-bottom: 0.25em;
@@ -37,14 +37,14 @@ footer{
         justify-content: center;
         align-items: center;
         
-        & > a {
+        & a {
             color: #516982;
             text-decoration: none;
             border-radius: 2px;
             height: 20px;
             line-height: 20px;
             
-            & > i {
+            & i {
                 font-size: 20px;
                 height: 1em;
                 width: 1em;

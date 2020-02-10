@@ -22,7 +22,7 @@
         border-radius: 5px;
         background-color: rgba(100, 100, 100, 0.25);
 
-        & > span {
+        & span {
             display: flex;
             justify-content: center;
             color: #dddddd;
@@ -32,12 +32,12 @@
             font-size: xxx-large;
             font-weight: lighter;
             
-            &.anim_slide_top {
+            & .anim_slide_top {
                 padding-top: 40px;
                 animation: 1s ease-out 0s 1 slideInFromTop;
             }
 
-            &.anim_slide_bottom {
+            & .anim_slide_bottom {
                 padding-bottom: 50px;
                 animation: 1s ease-out 0s 1 slideInFromBottom;
             }

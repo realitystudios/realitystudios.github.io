@@ -6,7 +6,7 @@
     margin: auto;
     background-color: $post-background-color;
     
-    & > a{
+    & a{
         color: #000000;
         text-decoration: none;
     }
@@ -15,7 +15,7 @@
         position: relative;
         text-align: left;
 
-        & > img{
+        & img{
             display: block;
             object-fit: cover;
             object-position: center;
@@ -23,13 +23,12 @@
             height: 100%;
         }
         
-        & > h1{ 
+        & h1{ 
             position: absolute;
             bottom: 10px;
             left: 5px;
             margin: 10px;
             font-size: xx-large;
-            
         }
     }
 
@@ -78,8 +77,10 @@
             margin-right: 5px;
             width: fit-content;
             
-            & > span > i {
-                margin: 5px;
+            & span{
+                & i {
+                    margin: 5px;
+                }
             }
         }
 
@@ -92,7 +93,7 @@
             width: fit-content;
             height: fit-content;
 
-            & > span{
+            & span{
                 margin: 5px;
             }
         }
@@ -101,15 +102,15 @@
     &__content{
         padding: 10px;
 
-        & > h1 {
+        & h1 {
             font-size: x-large;
         }
 
-        & > h2 {
+        & h2 {
             font-size: large;
         }
 
-        & > h3 {
+        & h3 {
             font-size: medium;
         }
     }
