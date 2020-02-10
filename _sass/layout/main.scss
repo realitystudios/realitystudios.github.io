@@ -26,9 +26,11 @@ body{
 }
 
 .content{
-    margin: auto;
-    height: 100%;
-    width: 100%;
+    margin: 10px 0px;
+    padding: 0 10px 10px 10px;
+    height: fit-content;
+    width: fit-content;
+    background-color: $post-background-color;
 }
 
 .page{
