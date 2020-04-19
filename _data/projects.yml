@@ -1,0 +1,5 @@
+- name: Brain Visualizer
+  description: A VR application for teaching children about the different parts of the brain and their specific functions.
+  image: /assets/images/landing-image.png
+  link: /brainvisualizer
+  tags: [VR]

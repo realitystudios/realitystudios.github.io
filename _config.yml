@@ -1,6 +1,10 @@
 title: Reality Studios
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "https://realitystudios.xyz"
 collections:
-  authors:
+ - authors
+paginate: 5
+paginate_path: "/blog/page:num/"
 plugins:
   - jekyll-sitemap
   - jekyll-seo-tag

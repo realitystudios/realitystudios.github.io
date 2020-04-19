@@ -1,18 +1,15 @@
 .landing{
-    display: grid;
+    position: relative;
     width: 100%;
-    height: 100%;
-    grid-template-areas: 
-        ". . . . ."
-        ". . . . ."
-        ". . main . ."
-        ". . . . ."
-        ". . . . .";
-    background: url("/assets/images/landing-image.png");
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
-    background-position: center;
-    
+    height: 300px;
+
+    &_image{
+        position: absolute;
+        max-width: 100%;
+        object-fit: cover;
+        z-index: 1;
+    }   
+
     &_title{
         grid-area: main;
         height: 200px;
@@ -22,6 +19,7 @@
         overflow: hidden;
         border-radius: 5px;
         background-color: rgba(100, 100, 100, 0.25);
+        z-index: 2;
 
         & span {
             display: flex;
