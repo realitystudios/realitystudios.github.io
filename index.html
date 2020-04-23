@@ -2,9 +2,30 @@
 layout: default
 title: Home
 ---
-<div class="landing">
-    <div class="landing_title">
-        <span class="anim_slide_top">REALITY</span>
-        <span class="anim_slide_bottom">STUDIOS</span>
+<section>
+    <div class="jumbotron">
+        <h1 class="display-4 text-center">{{ site.title }}</h1>
     </div>
-</div>
+</section>
+<section>
+    {% assign currentProject = site.data.projects[0] %}
+    <div class="card bg-light">
+        <img class="card-img" src="{{currentProject.image | relative_url}}"/>
+        <div class="card-img-overlay">
+            <h4 class="card-title text-light">
+                {{ currentProject.name }}
+            </h4>
+            <p>
+                <img src="{{currentProject.pipeline-status}}" />
+            </p>
+        </div>
+    </div>
+</section>
+<section>
+    {% if site.data.projects.length > 1 %}
+        <h3>Other Projects</h3>
+        {% for project in site.data.projects offset:1 %}
+            {{ project.name }}
+        {% endfor %}
+    {% endif %}
+</section>

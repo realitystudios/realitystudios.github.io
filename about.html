@@ -1,0 +1,42 @@
+---
+layout: default
+title: About
+---
+
+<section>
+    <h3>
+        VR Focussed Development
+    </h3> 
+        
+    We are an Independent software development studio.
+    
+    Our main focus is the developing Virtual Reality and Augmented Reality applications for a variety of areas.
+</section>
+
+<section>
+    <div class="page-header">
+        <h4>
+            History
+        </h4> 
+    </div>
+    <ul class="timeline">
+        {% for event in site.data.history %}
+            <li>
+                <div class="timeline-badge"></div>
+                <div class="timeline-panel">
+                    <div class="timeline-heading">
+                        <h5 class="timeline-title">
+                            {{ event.name }}
+                        </h5>
+                        <p class="text-muted">
+                            {{ event.date }}
+                        </p>
+                        <div class="timeline-body">
+                            {{ event.content}}
+                        </div>
+                    </div>
+                </div>
+            </li>
+        {% endfor %}
+    </ul>
+</section>

@@ -1,14 +1,20 @@
-<header>
-    <div class="nav_logo">
-        <a href="/">
-            <img src="/assets/images/realitystudios-logo.png">
+<header class="sticky-top">
+    <nav id="navbar" class="navbar navbar-expand-md navbar-dark bg-dark">
+        <a class="navbar-brand" href="/">
+            <img src="/assets/images/realitystudios-logo.png" alt="{{ site.title }}" height="40">
         </a>
-    </div>
-    <nav>
-        {% for item in site.data.navigation %}
-            <li class="nav_item {% if page.url == item.link %} nav_current {% endif %} hvr_underline_reveal">
-                <a href="{{item.link}}"> {{ item.name | Uppercase }} </a>
-            </li>       
-        {% endfor %} 
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation" aria-controls="navigation" aria-expanded="false" aria-label="Toggle Navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navigation">
+            <ul class="navbar-nav nav-pills">
+                {% for item in site.data.navigation %}
+                <li class="nav-item {% if page.url == item.link %}active{% endif %}">
+                    <a class="nav-link"href="{{item.link}}"> {{ item.name | Uppercase }} </a>
+                </li>       
+                {% endfor %} 
+            </ul>
+        </div>
     </nav>
 </header>

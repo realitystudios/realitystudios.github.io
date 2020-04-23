@@ -1,0 +1,46 @@
+---
+layout: default
+title: Blog
+---
+<h1>Latest Posts</h1>
+
+{% for post in paginator.posts %}
+<a class="text-white" href="{{ post.url }}">
+    <div class="card bg-light">
+        <img class="card-img" src="{{post.cover}}" alt="{{post.title}}"/>
+        <div class="card-img-overlay">
+            <h5 class="card-title">
+                {{ post.title }}
+            </h5>
+            <p class="card-text">{{ post.date | date_to_string }}</p>
+        </div>
+    </div>
+</a>
+{% endfor %}
+
+<nav aria-label="Pagination">
+    <ul class="pagination">
+        {% if paginator.previous_page %}
+            <li class="page-item">
+                <a class="page-link" href="{{ paginator.previous_page_path | relative_url }}">Previous</a>
+            </li>
+        {% endif %}
+        {% for page in (1..paginator.total_pages) %}
+            {% if page == paginator.page %}
+            {% elsif page == 1 %}
+            <li class="page-item">
+                <a class="page-link" href="{{ paginator.previous_page_path | relative_url }}">{{ page }}</a>
+            </li>
+            {% else %}
+            <li class="page-item">
+                <a class="page-link" href="{{ site.paginate_path | relative_url | replace: ':num', page }}">{{ page }}</a>
+            </li>
+            {% endif %}
+        {% endfor %}
+        {% if paginator.next_page %}
+            <li class="page-item">
+                <a class="page-link" href="{{ paginator.next_page_path | relative_url}}">Next</a>
+            </li>
+        {% endif %}
+    </ul>
+</nav>

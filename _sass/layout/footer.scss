@@ -4,18 +4,14 @@ footer{
     flex-wrap: wrap;
     position: relative;
     bottom: 0;
-    color: #516982;
-    background-color: #212B36;
     height: fit-content;
     width: 100%;
     text-align: center;
 }
 
 .footer{
-
     &_col {
-        margin-top: 0.25em;
-        margin-bottom: 0.25em;
+        margin: 0.25em auto;
         padding-right: 0px;
         padding-left: 0px;
         flex: 0 0 33.33333%;
@@ -35,7 +31,6 @@ footer{
         & a {
             display: block;
             font-size: small;
-            color: #516982;
             text-decoration: none;
         }
     }
@@ -50,7 +45,6 @@ footer{
         align-items: center;
         
         & a {
-            color: #516982;
             text-decoration: none;
             border-radius: 2px;
             height: 20px;

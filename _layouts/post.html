@@ -2,30 +2,21 @@
 layout: default
 ---
 
-<div class="post">
-    
-    <div class="post__header">
-        <img class="post__cover" src="{{ page.cover }}" alt="Post Cover"/>
-        <h1 class="post__header--title">{{ page.title }}</h1>
-        <div class="post__header--date">
-            <span>
-                <i class="fas fa-calendar"></i>{{ page.date | date_to_string }}
-            </span>
-            <span>
-                <i class="fas fa-address-card"></i>{{ page.author }}
-            </span>
-        </div>
-        <div class="post__header--tags">
-            {% assign tags = site.data.tags %}
-            {% for tag in page.tags %}
-                <span class="badge badge-{{tags[tag].color}}">
-                    <i class="{{ tags[tag].icon }}"></i>{{ tag | upcase }}
-                </span>
-            {% endfor %}
-        </div>
+<div class="card mb-3">
+    <img class="card-img-top" src="{{ page.cover }}" alt="Post Cover"/>
+    <div class="card-body">
+        <h5 class="card-title">{{ page.title }}</h5>
+        {% assign tags = site.data.tags %}
+        {% for tag in page.tags %}
+        <span class="badge badge-pill badge-{{tags[tag].color}} text-light">
+            <i class="{{ tags[tag].icon }}"></i>{{ tag | upcase }}
+        </span>
+        {% endfor %}
+        <p class="text-muted">
+            <i class="fas fa-calendar"></i>{{ page.date | date_to_string }}
+            <i class="fas fa-address-card"></i>{{ page.author }}
+        </p>
     </div>
-    
-    <div class="post__content">
-        {{ content }}
-    </div>
-</div>
+</div>    
+
+{{ content }}
