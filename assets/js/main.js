@@ -24,29 +24,31 @@ grecaptcha.ready(function() {
 });
 
 const contactForm = document.getElementById('contactForm');
-contactForm.addEventListener('submit', (e) => {
-    e.preventDefault();
-
-    new FormData(contactForm);
-});
-contactForm.addEventListener('formdata', (e) => {
-    var data = {};
-
-    e.formData.forEach((value, key) => {
-        data[key] = value;
+if (contactForm !== null || undefined){
+    contactForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        
+        new FormData(contactForm);
     });
+    contactForm.addEventListener('formdata', (e) => {
+        var data = {};
+        
+        e.formData.forEach((value, key) => {
+            data[key] = value;
+        });
 
-    verifyCaptcha('submitForm', (response)=>{
-        if (JSON.parse(response).score > 0.5){
-            var xhr = new XMLHttpRequest();
-            xhr.open("POST", "https://us-central1-reality-studios.cloudfunctions.net/sendEmail", true);
-            xhr.setRequestHeader("Content-Type", "application/json");
-            xhr.onreadystatechange = () => {
-                if (xhr.readyState === 4){
-                    console.log("Request Finished");
-                }
-            }; 
-            xhr.send(JSON.stringify(data));
-        }
+        verifyCaptcha('submitForm', (response)=>{
+            if (JSON.parse(response).score > 0.5){
+                var xhr = new XMLHttpRequest();
+                xhr.open("POST", "https://us-central1-reality-studios.cloudfunctions.net/sendEmail", true);
+                xhr.setRequestHeader("Content-Type", "application/json");
+                xhr.onreadystatechange = () => {
+                    if (xhr.readyState === 4){
+                        console.log("Request Finished");
+                    }
+                }; 
+                xhr.send(JSON.stringify(data));
+            }
+        });
     });
-});
+}

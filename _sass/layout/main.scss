@@ -13,32 +13,6 @@ html, body{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-body{
-    display: flex;
-    flex-direction: column;
-    min-height: 100%;
-    background-color: $background-color;
-}
-
-.wrapper{
-    flex: 1;
-    margin-top: 60px;
-}
-
-.content{
-    margin: 10px 0px;
-    padding: 0 10px 10px 10px;
-    height: fit-content;
-    width: fit-content;
-    background-color: $post-background-color;
-}
-
-.page{
-    margin:auto;
-    width: 900px;
-
-    & h1 {
-        margin: 10px 0;
-        font-size: xx-large;
-    }
+section{
+    margin: 10px auto;
 }

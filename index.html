@@ -8,5 +8,21 @@ title: Home
     </div>
 </section>
 <section>
-
+    {% assign currentProject = site.data.projects[0] %}
+    <div class="card bg-light">
+        <img class="card-img" src="{{currentProject.image | relative_url}}"/>
+        <div class="card-img-overlay">
+            <h5 class="card-title">
+                {{ currentProject.name }}
+            </h5>
+        </div>
+    </div>
+</section>
+<section>
+    {% if site.data.projects.length > 1 %}
+        <h3>Other Projects</h3>
+        {% for project in site.data.projects offset:1 %}
+            {{ project.name }}
+        {% endfor %}
+    {% endif %}
 </section>

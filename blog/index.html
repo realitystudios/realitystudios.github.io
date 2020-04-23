@@ -6,12 +6,12 @@ title: Blog
 
 {% for post in paginator.posts %}
 <a class="text-white" href="{{ post.url }}">
-    <div class="card bg-dark">
+    <div class="card bg-light">
         <img class="card-img" src="{{post.cover}}" alt="{{post.title}}"/>
         <div class="card-img-overlay">
-            <h4 class="card-title">
+            <h5 class="card-title">
                 {{ post.title }}
-            </h4>
+            </h5>
             <p class="card-text">{{ post.date | date_to_string }}</p>
         </div>
     </div>
