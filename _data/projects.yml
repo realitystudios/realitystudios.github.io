@@ -2,5 +2,5 @@
   description: A VR application for teaching children about the different parts of the brain and their specific functions.
   image: /assets/images/landing-image.png
   pipeline-status: https://github.com/realitystudios/BrainVisualizer/workflows/Unity%20-%20Build/badge.svg?branch=master
-  link: /brainvisualizer
+  link: /BrainVisualizer
   tags: [VR]
