@@ -12,9 +12,12 @@ title: Home
     <div class="card bg-light">
         <img class="card-img" src="{{currentProject.image | relative_url}}"/>
         <div class="card-img-overlay">
-            <h5 class="card-title">
+            <h4 class="card-title text-light">
                 {{ currentProject.name }}
-            </h5>
+            </h4>
+            <p>
+                <img src="{{currentProject.pipeline-status}}" />
+            </p>
         </div>
     </div>
 </section>
